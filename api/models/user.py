@@ -11,7 +11,7 @@ class UserProfile(models.Model):
     description = models.TextField(blank=True, null=True)
     birth = models.DateField()
 
-    def __str__(self):
+    def __str__(self) -> str:
         return str(self.user)
 
 
