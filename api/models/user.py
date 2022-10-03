@@ -9,7 +9,7 @@ class UserProfile(models.Model):
     )
     image = models.ImageField(blank=True, null=True, upload_to="profile")
     description = models.TextField(blank=True, null=True)
-    birth = models.DateField()
+    birth = models.DateField(blank=True, null=True)
 
     def __str__(self) -> str:
         return str(self.user)
