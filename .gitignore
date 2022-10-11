@@ -1,4 +1,3 @@
 __pycache__/
 .idea/
-ui/node_modeuls
-ui/build
+media/
