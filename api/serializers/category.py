@@ -4,6 +4,12 @@ from ..models import Category
 
 
 class CategorySerializer(serializers.ModelSerializer):
+    svg_url = serializers.SerializerMethodField()
+
     class Meta:
         model = Category
-        fields = ["name"]
+        fields = ["id", "name", "svg_url"]
+
+    def get_svg_url(self, obj):
+        if obj.svg:
+            return obj.svg.url
